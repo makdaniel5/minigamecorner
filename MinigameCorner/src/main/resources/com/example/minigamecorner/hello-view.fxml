@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1200.0" style="-fx-background-image: url(&quot;/pictures/cover.png&quot;); -fx-background-repeat: norepeat; -fx-background-size: cover; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minigamecorner.HelloController">
+  <children>
+    <Label fx:id="title" layoutX="269.0" layoutY="58.0" text="Minigame Corner" visible="false">
+      <font>
+        <Font name="OCR A Extended" size="73.0" />
+      </font>
+    </Label>
+    <GridPane fx:id="menuGridPane" layoutX="205.0" layoutY="233.0" prefHeight="506.0" prefWidth="791.0" visible="false">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="263.0" prefWidth="246.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="453.0" minWidth="20.0" prefWidth="264.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="263.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="370.0" minHeight="10.0" prefHeight="370.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="136.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+        <ImageView fx:id="imgScaryMaze" fitHeight="281.0" fitWidth="243.0" onMouseClicked="#startScaryMaze" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+          <image>
+            <Image url="@../../../pictures/maze_icon.png" />
+          </image>
+          <GridPane.margin>
+            <Insets />
+          </GridPane.margin>
+        </ImageView>
+        <ImageView fx:id="imgTicTacDie" fitHeight="239.0" fitWidth="241.0" onMouseClicked="#startTicTacDie" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+          <image>
+            <Image url="@../../../pictures/tic-tac-die_icon.png" />
+          </image>
+        </ImageView>
+        <ImageView fx:id="imgHangYou" fitHeight="232.0" fitWidth="237.0" onMouseClicked="#startHangYou" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+          <image>
+            <Image url="@../../../pictures/hang-you_icon.png" />
+          </image>
+        </ImageView>
+        <Label fx:id="lblScaryMaze" alignment="TOP_LEFT" text="Scary Maze" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+          <font>
+            <Font name="OCR A Extended" size="19.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblTicTacDie" alignment="TOP_LEFT" text="Tic-Tac-Die" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+          <font>
+            <Font name="OCR A Extended" size="19.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblHangYou" alignment="TOP_LEFT" text="Hang-you" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+          <font>
+            <Font name="OCR A Extended" size="19.0" />
+          </font>
+        </Label>
+      </children>
+    </GridPane>
+    <Label fx:id="lblReturn" layoutX="14.0" layoutY="14.0" onMouseClicked="#stopGame" text="&lt;" visible="false">
+      <font>
+        <Font name="OCR A Extended" size="58.0" />
+      </font>
+    </Label>
+    <GridPane fx:id="letterBox" layoutX="1027.0" layoutY="35.0" visible="false">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="52.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" prefWidth="148.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <children>
+        <Label fx:id="lblA" onMouseClicked="#letterClick" text="A" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblB" layoutX="51.0" layoutY="10.0" onMouseClicked="#letterClick" text="B" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblC" onMouseClicked="#letterClick" text="C" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblD" onMouseClicked="#letterClick" text="D" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblE" onMouseClicked="#letterClick" text="E" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblF" onMouseClicked="#letterClick" text="F" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblG" onMouseClicked="#letterClick" text="G" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblH" onMouseClicked="#letterClick" text="H" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblI" onMouseClicked="#letterClick" text="I" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblJ" onMouseClicked="#letterClick" text="J" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblK" onMouseClicked="#letterClick" text="K" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblL" onMouseClicked="#letterClick" text="L" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblM" onMouseClicked="#letterClick" text="M" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblN" onMouseClicked="#letterClick" text="N" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblO" onMouseClicked="#letterClick" text="O" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblP" onMouseClicked="#letterClick" text="P" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblQ" onMouseClicked="#letterClick" text="Q" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblR" onMouseClicked="#letterClick" text="R" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblS" onMouseClicked="#letterClick" text="S" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblT" onMouseClicked="#letterClick" text="T" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblU" onMouseClicked="#letterClick" text="U" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblV" onMouseClicked="#letterClick" text="V" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblW" onMouseClicked="#letterClick" text="W" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblX" onMouseClicked="#letterClick" text="X" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblY" onMouseClicked="#letterClick" text="Y" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+        <Label fx:id="lblZ" onMouseClicked="#letterClick" text="Z" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER">
+          <font>
+            <Font name="OCR A Extended" size="29.0" />
+          </font>
+        </Label>
+      </children>
+    </GridPane>
+    <ImageView fx:id="imageHangYou" fitHeight="506.0" fitWidth="550.0" layoutX="236.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+    <Label fx:id="wordHangYou" layoutX="123.0" layoutY="679.0" prefHeight="78.0" prefWidth="808.0" style="-fx-line-spacing: 5px;" text="Word" visible="false">
+      <font>
+        <Font name="OCR A Extended" size="58.0" />
+      </font>
+    </Label>
+      <GridPane fx:id="gridpaneTicTacDie" gridLinesVisible="true" layoutX="350.0" layoutY="97.0" prefHeight="500.0" prefWidth="500.0" style="-fx-border-color: purple; -fx-border-width: 7px;" visible="false">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="imageTicTacDie1" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView fx:id="imageTicTacDie2" fitHeight="165.0" fitWidth="167.0" layoutX="10.0" layoutY="11.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1" />
+            <ImageView fx:id="imageTicTacDie3" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="2" />
+            <ImageView fx:id="imageTicTacDie4" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.rowIndex="1" />
+            <ImageView fx:id="imageTicTacDie5" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="imageTicTacDie6" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="imageTicTacDie7" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.rowIndex="2" />
+            <ImageView fx:id="imageTicTacDie8" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="imageTicTacDie9" fitHeight="165.0" fitWidth="167.0" onMouseClicked="#tictacdieMove" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Label fx:id="labelTicTacDie" layoutX="350.0" layoutY="708.0" prefHeight="62.0" prefWidth="500.0" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="OCR A Extended" size="50.0" />
+         </font>
+      </Label>
+    <ImageView fx:id="mazePic" fitHeight="606.0" fitWidth="932.0" layoutX="128.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+        <Image url="@../../../pictures/mazePattern.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="wall" fitHeight="530.0" fitWidth="932.0" layoutX="127.0" layoutY="188.0" onMouseDragEntered="#collision" onMouseDragOver="#collision" pickOnBounds="true" preserveRatio="true" visible="false">
+      <image>
+        <Image url="@../../../pictures/the_wall_only.png" />
+      </image>
+    </ImageView>
+    <Label fx:id="losingOrWinning" layoutX="454.0" layoutY="71.0" prefHeight="42.0" prefWidth="281.0">
+      <font>
+        <Font name="OCR A Extended" size="50.0" />
+      </font>
+    </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" height="106.0" layoutX="859.0" layoutY="565.0" onMouseEntered="#goal" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="110.0" />
+  </children>
+</AnchorPane>
